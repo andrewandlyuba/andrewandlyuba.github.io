@@ -1,0 +1,251 @@
+html {
+  scroll-behavior: smooth;
+}
+
+section {
+  min-height: 100vh;
+  color: black;
+  overflow: auto;
+  text-align: center;
+  position: relative;
+  font-family: 'Merriweather', serif;
+}
+
+h1, h2 {
+  margin: 0;
+}
+
+p {
+  font-size: 20px;
+  line-height: 26px;
+  margin: 0 0 40px;
+}
+
+h1 {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 200;
+  color: #202020;
+  letter-spacing: 2px;
+  font-size: 60px;
+  padding: 50px 0;
+}
+
+.line {
+  display: inline-block;
+}
+
+section.dark {
+  background-color: #202020;
+  color: #ffffff;
+}
+
+section.dark h1 {
+  color: #ffffff;
+}
+
+.column {
+  width: 90%;
+  padding: 5px 5%;
+  margin-bottom: 25px;
+}
+
+.column img, .column iframe, .column canvas {
+  max-width: 100%;
+}
+
+a.button {
+  display: inline-block;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  color: #202020;
+  letter-spacing: 2px;
+  text-decoration: none;
+  border: 2px solid #202020;
+  padding: 20px;
+  margin: 50px 0;
+}
+
+
+
+section.main {
+  background-image: url('/skyline.jpg');
+  background-size: cover;
+}
+
+section.main h1 {
+  color: white;
+  margin: 50px 0 25px;
+  padding: 0;
+}
+
+section.main h2 {
+  color: white;
+  font-size: 20px;
+  margin: 0;
+  font-weight: normal;
+  line-height: 30px;
+}
+
+section.main nav {
+  margin-top: 75px;
+}
+
+section.main nav a {
+  display: block;
+  padding: 15px;
+  font-size: 20px;
+  color: white;
+  text-decoration: none;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  letter-spacing: 2px;
+}
+
+section.main nav .separator {
+  display: none;
+  font-size: 13px;
+  color: white;
+  padding: 25px;
+  animation: spin 5s linear infinite;
+}
+
+.overlay {
+  z-index: 1;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  overflow: auto;
+  top: 0px;
+  left: 0px;
+  background: rgba(0, 0, 0, 0.3);
+}
+
+.amp {
+  display: inline-block;
+  font-size: 48px;
+  position: relative;
+  color: #202020;
+  padding: 0px 10px;
+  top: -5px;
+  margin: 0 30px;
+  font-weight: 400;
+}
+
+section.main .amp {
+  /* Disable left-margin when the heading is broken into two lines. */
+  margin-left: 0;
+}
+
+.amp:after {
+  content: "⬢";
+  position: absolute;
+  top: -18px;
+  left: -9px;
+  z-index: -1;
+  color: white;
+  font-size: 80px;
+  animation: quickspin 10s cubic-bezier(0.33, 1, 0.68, 1) infinite;
+}
+
+/* Targets wider than vertical phone. */
+@media screen and (min-width: 420px) {
+  section.main h1 {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+  }
+
+  section.main .amp {
+    /* Restore margin on both sides when displayed in single line. */
+    margin-left: 30px;
+  }
+
+  section.main nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  section.main nav a {
+    display: inline-block;
+  }
+
+  section.main nav .separator {
+    display: inline-block;
+  }
+}
+
+/* Tagets wider than horizontal phone. */
+@media screen and (min-width: 668px) {
+  section.main h1 {
+    margin-top: 150px;
+    font-size: 80px;
+  }
+
+  section.main .amp {
+    top: -10px;
+  }
+
+  section.main h2 {
+    line-height: 50px;
+    font-size: 30px;
+  }
+
+  section.main nav {
+    margin-top: 150px;
+  }
+
+  section.main nav a {
+    font-size: 30px;
+  }
+
+  .line {
+    /* Don't need to use this element for breaks beyond narrow screens. */
+    display: inline;
+  }
+
+  .column {
+    display: inline-block;
+    width: 48%;
+    max-width: 400px;
+    padding: 0 1%;
+    vertical-align: top;
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  section {
+    min-height: auto;
+    padding: 100px;
+  }
+
+  section.main {
+    height: 100vh;
+    padding: 0;
+  }
+
+  section.main h1 {
+    font-size: 80px;
+  }
+}
+
+@keyframes spin {
+    from {
+        transform:rotate(0deg);
+    }
+    to {
+        transform:rotate(60deg);
+    }
+}
+
+@keyframes quickspin {
+    0% {
+        transform:rotate(0deg);
+    }
+    2%, 100% {
+        transform:rotate(60deg);
+    }
+}

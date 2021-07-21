@@ -1,0 +1,17 @@
+<svg version="1.1"
+     viewBox="0 20 300 260"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Raleway:wght@100&amp;display=swap');
+    polygon {
+      fill:white;
+    }
+    text {
+      font-family: 'Raleway', sans-serif;
+      font-size: 250px;
+      font-weight:100;
+    }
+  </style>
+     <polygon class="hex" points="300,150 225,280 75,280 0,150 75,20 225,20"></polygon>
+     <text x="65" y="238">&amp;</text>
+</svg>
