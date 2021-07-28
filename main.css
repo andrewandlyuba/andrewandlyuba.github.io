@@ -207,7 +207,7 @@ section.main img.amp {
 @media
 screen and (min-width: 1024px),
 screen and (min-height: 768px),
-screen and (min-device-pixel-ratio:1.5) {
+screen and (min-resolution: 97dpi) {
   section.main {
     background-image: url('/Images/skyline_2048.jpg');
   }
@@ -216,8 +216,8 @@ screen and (min-device-pixel-ratio:1.5) {
 @media
 screen and (min-width: 2048px),
 screen and (min-height: 1536px),
-screen and (min-device-pixel-ratio:1.5) and (min-width: 1024px),
-screen and (min-device-pixel-ratio:1.5) and (min-height: 1536px) {
+screen and (min-resolution: 97dpi) and (min-width: 1024px),
+screen and (min-resolution: 97dpi) and (min-height: 1536px) {
   section.main {
     background-image: url('/Images/skyline.jpg');
   }
