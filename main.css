@@ -21,6 +21,11 @@ p {
   margin: 0 0 40px;
 }
 
+a:link, a:visited {
+  color:black;
+  text-decoration: underline;
+}
+
 h1 {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
@@ -70,7 +75,7 @@ a.button {
 
 
 section.main {
-  background-image: url('/skyline.jpg');
+  background-image: url('/Images/skyline_1024.jpg');
   background-size: cover;
 }
 
@@ -78,6 +83,7 @@ section.main h1 {
   color: white;
   margin: 50px 0 25px;
   padding: 0;
+  line-height: 55px;
 }
 
 section.main h2 {
@@ -123,46 +129,11 @@ section.main nav .separator {
   background: rgba(0, 0, 0, 0.3);
 }
 
-.amp {
-  display: inline-block;
-  font-size: 48px;
-  position: relative;
-  color: #202020;
-  padding: 0px 10px;
-  top: -5px;
-  margin: 0 30px;
-  font-weight: 400;
+section.main img.amp {
+  height:43px;
 }
 
-section.main .amp {
-  /* Disable left-margin when the heading is broken into two lines. */
-  margin-left: 0;
-}
-
-.amp:after {
-  content: "⬢";
-  position: absolute;
-  top: -18px;
-  left: -9px;
-  z-index: -1;
-  color: white;
-  font-size: 80px;
-  animation: quickspin 10s cubic-bezier(0.33, 1, 0.68, 1) infinite;
-}
-
-/* Targets wider than vertical phone. */
-@media screen and (min-width: 420px) {
-  section.main h1 {
-    display: flex;
-    justify-content: center;
-    align-content: center;
-  }
-
-  section.main .amp {
-    /* Restore margin on both sides when displayed in single line. */
-    margin-left: 30px;
-  }
-
+@media screen and (min-width: 675px) {
   section.main nav {
     display: flex;
     align-items: center;
@@ -176,17 +147,23 @@ section.main .amp {
   section.main nav .separator {
     display: inline-block;
   }
+
+  a.button {
+    padding:20px 50px;
+  }
 }
 
 /* Tagets wider than horizontal phone. */
-@media screen and (min-width: 668px) {
+@media screen and (min-width: 900px) {
   section.main h1 {
-    margin-top: 150px;
+    margin: 150px 0 50px;
     font-size: 80px;
   }
 
-  section.main .amp {
-    top: -10px;
+  section.main img.amp {
+    height: 60px;
+    position: relative;
+    top: 2px;
   }
 
   section.main h2 {
@@ -202,16 +179,11 @@ section.main .amp {
     font-size: 30px;
   }
 
-  .line {
-    /* Don't need to use this element for breaks beyond narrow screens. */
-    display: inline;
-  }
-
   .column {
     display: inline-block;
     width: 48%;
-    max-width: 400px;
-    padding: 0 1%;
+    max-width: 600px;
+    padding: 0 0.8%;
     vertical-align: top;
   }
 }
@@ -229,6 +201,25 @@ section.main .amp {
 
   section.main h1 {
     font-size: 80px;
+  }
+}
+
+@media
+screen and (min-width: 1024px),
+screen and (min-height: 768px),
+screen and (min-device-pixel-ratio:1.5) {
+  section.main {
+    background-image: url('/Images/skyline_2048.jpg');
+  }
+}
+
+@media
+screen and (min-width: 2048px),
+screen and (min-height: 1536px),
+screen and (min-device-pixel-ratio:1.5) and (min-width: 1024px),
+screen and (min-device-pixel-ratio:1.5) and (min-height: 1536px) {
+  section.main {
+    background-image: url('/Images/skyline.jpg');
   }
 }
 
