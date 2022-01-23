@@ -45,6 +45,19 @@ function init() {
       imageIndex = (imageIndex+1)%(IMAGE_URLS.length)
     }, ROTATION_SPEED_MS / 2);
   }, ADVANCE_INTERVAL_MS);
+
+  // Show/hide top menu when appropriate
+  window.addEventListener("scroll", showHideMenu);
+  showHideMenu();
+}
+
+function showHideMenu() {
+  const threshold = this.document.getElementById("welcome").clientHeight * (2/3);
+  if (window.scrollY > threshold) {
+    this.document.getElementById("sticky").classList.add("visible");
+  } else {
+    this.document.getElementById("sticky").classList.remove("visible");
+  }
 }
 
 function setSize() {
@@ -69,7 +82,7 @@ function setSize() {
   width = rect.width;
   height = rect.width;
 
-  console.log("Setting size", rect.width, rect.width, canvas.width, canvas.height)
+  // console.log("Setting size", rect.width, rect.width, canvas.width, canvas.height)
 }
 
 function draw() {

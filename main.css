@@ -3,12 +3,20 @@ html {
 }
 
 section {
-  min-height: 100vh;
+  min-height: calc(100vh - 30px);
   color: black;
   overflow: auto;
   text-align: center;
   position: relative;
   font-family: 'Merriweather', serif;
+  padding: 0 0 30px;
+}
+
+.scrollanchor::before {
+  content:"";
+  display:block;
+  height: 48px;
+  margin: -48px 0 0;
 }
 
 h1, h2 {
@@ -17,7 +25,7 @@ h1, h2 {
 
 p {
   font-size: 20px;
-  line-height: 26px;
+  line-height: 28px;
   margin: 0 0 40px;
 }
 
@@ -32,12 +40,16 @@ h1 {
   font-weight: 200;
   color: #202020;
   letter-spacing: 2px;
-  font-size: 60px;
+  font-size: 35px;
   padding: 50px 0;
 }
 
 .line {
   display: inline-block;
+}
+
+section.light {
+  background-color: #ffeff1;
 }
 
 section.dark {
@@ -51,7 +63,7 @@ section.dark h1 {
 
 .column {
   width: 90%;
-  padding: 5px 5%;
+  padding: 0 5%;
   margin-bottom: 25px;
 }
 
@@ -69,14 +81,57 @@ a.button {
   text-decoration: none;
   border: 2px solid #202020;
   padding: 20px;
-  margin: 50px 0;
+  margin: 20px 0 60px;
+}
+
+section.dark a.button {
+  color: #ffeff1;
+  border-color: #ffeff1;
+}
+
+a#sticky {
+  position: fixed;
+  background: #ffeff1;
+  z-index: 10;
+  width:100%;
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  text-align: center;
+  font-size: 18px;
+  padding: 13px 0;
+  text-decoration: none;
+  display: block;
+  opacity: 0;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid #202020;
+}
+
+#sticky.visible {
+  opacity:1;
+}
+
+#sticky img.menu {
+  position: fixed;
+  left:10px;
+  top:11px;
+  width:24px;
+  height:24px;
+}
+
+#sticky img.amp {
+  height: 14px;
+  margin: 0 1px 0 2px;
+  position: relative;
+  top:1px;
 }
 
 
 
 section.main {
-  background-image: url('/Images/skyline_1024.jpg');
+  background-image: url('/Images/skyline2_1024.jpg');
   background-size: cover;
+  background-position-x: 33%
 }
 
 section.main h1 {
@@ -84,18 +139,15 @@ section.main h1 {
   margin: 50px 0 25px;
   padding: 0;
   line-height: 55px;
+  font-size:60px;
 }
 
 section.main h2 {
   color: white;
   font-size: 20px;
-  margin: 0;
+  margin: 0 0 75px;
   font-weight: normal;
   line-height: 30px;
-}
-
-section.main nav {
-  margin-top: 75px;
 }
 
 section.main nav a {
@@ -126,7 +178,7 @@ section.main nav .separator {
   overflow: auto;
   top: 0px;
   left: 0px;
-  background: rgba(0, 0, 0, 0.3);
+  background: rgba(0, 0, 0, 0.5);
 }
 
 section.main img.amp {
@@ -155,6 +207,10 @@ section.main img.amp {
 
 /* Tagets wider than horizontal phone. */
 @media screen and (min-width: 900px) {
+  h1 {
+    font-size: 60px;
+  }
+
   section.main h1 {
     margin: 150px 0 50px;
     font-size: 80px;
@@ -168,11 +224,8 @@ section.main img.amp {
 
   section.main h2 {
     line-height: 50px;
+    margin-bottom: 150px;
     font-size: 30px;
-  }
-
-  section.main nav {
-    margin-top: 150px;
   }
 
   section.main nav a {
@@ -182,10 +235,27 @@ section.main img.amp {
   .column {
     display: inline-block;
     width: 48%;
-    max-width: 600px;
+    max-width: 500px;
     padding: 0 0.8%;
     vertical-align: top;
   }
+
+  a#sticky {
+    padding: 31px;
+  }
+
+  a#sticky img.menu {
+    top: 25px;
+    width: 32px;
+    height: 32px;
+  }
+
+  .scrollanchor::before {
+    content:"";
+    display:block;
+    height: 85px;
+    margin: -85px 0 0;
+  }  
 }
 
 @media screen and (min-width: 1600px) {
@@ -209,7 +279,7 @@ screen and (min-width: 1024px),
 screen and (min-height: 768px),
 screen and (min-resolution: 97dpi) {
   section.main {
-    background-image: url('/Images/skyline_2048.jpg');
+    background-image: url('/Images/skyline2_2048.jpg');
   }
 }
 
@@ -219,7 +289,7 @@ screen and (min-height: 1536px),
 screen and (min-resolution: 97dpi) and (min-width: 1024px),
 screen and (min-resolution: 97dpi) and (min-height: 1536px) {
   section.main {
-    background-image: url('/Images/skyline.jpg');
+    background-image: url('/Images/skyline2.jpg');
   }
 }
 
@@ -228,15 +298,6 @@ screen and (min-resolution: 97dpi) and (min-height: 1536px) {
         transform:rotate(0deg);
     }
     to {
-        transform:rotate(60deg);
-    }
-}
-
-@keyframes quickspin {
-    0% {
-        transform:rotate(0deg);
-    }
-    2%, 100% {
         transform:rotate(60deg);
     }
 }

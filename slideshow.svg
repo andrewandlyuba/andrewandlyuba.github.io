@@ -1,0 +1,112 @@
+<svg version="1.1"
+     viewBox="0 0 320 280"
+     xmlns="http://www.w3.org/2000/svg">
+  <style>
+    polygon {
+      animation: spinInSteps 20s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+      animation-delay: -1s; /* Used to synchronize different animations. */
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    image {
+      animation-duration: 20s;
+      animation-timing-function: linear;
+      animation-iteration-count: infinite;
+      animation-delay: -1s; /* Used to synchronize different animations. */
+    }
+
+    #image0 {
+      animation-name:displayImage0;
+    }
+    #image1 {
+      animation-name:displayImage1;
+    }
+    #image2 {
+      animation-name:displayImage2;
+    }
+
+    @keyframes spinInSteps {
+      0%,30% {
+        transform: rotate(0deg);
+      }
+      34%,64% {
+        transform: rotate(60deg);
+      }
+      68%,97% {
+        transform: rotate(120deg);
+      }
+      100% {
+        transform: rotate(180deg);
+      }
+    }
+
+    @keyframes displayImage0 {
+      0%,30% {
+        opacity:1;
+      }
+      32%,100% {
+        opacity:0;
+      }
+    }
+    @keyframes displayImage1 {
+      0%,30% {
+        opacity:0;
+      }
+      32%,64% {
+        opacity:1;
+      }
+      66%,100% {
+        opacity:0;
+      }
+    }
+    @keyframes displayImage2 {
+      0%,66% {
+        opacity:0;
+      }
+      68%,98% {
+        opacity:1;
+      }
+      99%,100% {
+        opacity:0;
+      }
+    }
+  </style>
+  <defs>
+    <clipPath id="imageBounds">
+      <polygon
+          fill="none"
+          stroke="none"
+          points="310,150 235,280 85,280 10,150 85,20 235,20" />
+    </clipPath>
+  </defs>
+  <image
+      id="image0"
+      x="0"
+      y="0"
+      width="320"
+      height="320"
+      href="/garden.jpg"
+      clip-path="url(#imageBounds)" />
+  <image
+      id="image1"
+      x="0"
+      y="0"
+      width="320"
+      height="320"
+      href="/garden1.jpg"
+      clip-path="url(#imageBounds)" />
+  <image
+      id="image2"
+      x="0"
+      y="0"
+      width="320"
+      height="320"
+      href="/garden2.jpg"
+      clip-path="url(#imageBounds)" />
+  <polygon
+      fill="none"
+      stroke="black"
+      stroke-width="5px"
+      points="310,150 235,280 85,280 10,150 85,20 235,20" />
+</svg>
