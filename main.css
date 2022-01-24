@@ -104,7 +104,7 @@ a#sticky {
   display: block;
   opacity: 0;
   transition: all 0.2s ease;
-  border-bottom: 2px solid #202020;
+  border-bottom: 3px solid #202020;
 }
 
 #sticky.visible {
@@ -153,7 +153,8 @@ a#sticky {
 section.main {
   background-image: url('/Images/skyline2_1024.jpg');
   background-size: cover;
-  background-position-x: 33%
+  background-position-x: 33%;
+  background-position-y: bottom;
 }
 
 section.main h1 {
