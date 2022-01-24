@@ -1,6 +1,7 @@
 <!doctype html>
 
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,7 +12,7 @@
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@200;400&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather&family=Raleway:wght@200;400;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="/normalize.css">
   <link rel="stylesheet" href="/main.css">
 
@@ -19,7 +20,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-FW92TV6XY5"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-FW92TV6XY5');
@@ -27,10 +28,10 @@
 </head>
 
 <body>
-    <a href="#welcome" id="sticky">
-      <img src="/menu.svg" alt="Menu" class="menu" />
-      Andrew <img src="/amp-dark.svg" alt="&amp;" class="amp" /> Lyuba
-    </a>
+  <a href="#welcome" id="sticky">
+    <img src="/menu.svg" alt="Menu" class="menu" />
+    Andrew <img src="/amp-dark.svg" alt="&amp;" class="amp" /> Lyuba
+  </a>
 
   <section class="main" id="welcome">
     <div class="overlay">
@@ -48,7 +49,7 @@
         <span class="separator">⬢</span>
         <a href="#rsvp">RSVP</a>
       </nav>
-      <nav>  
+      <nav>
         <a href="#hotel">Hotel &amp Travel</a>
         <span class="separator">⬢</span>
         <a href="#registry">Gifts &amp; Registry</a>
@@ -60,18 +61,34 @@
   <section class="light">
     <h1>Our Story</h1>
 
+    <div class="embla">
+      <div class="embla__container">
+        <div class="embla__slide">
+          <img class="embla__slide__img" src="/Images/slideshow2.jpg" />
+        </div>
+        <div class="embla__slide">
+          <img class="embla__slide__img" src="/Images/slideshow4.jpg" />
+        </div>
+        <div class="embla__slide">
+          <img class="embla__slide__img" src="/Images/slideshow1.jpg" />
+        </div>
+        <div class="embla__slide">
+          <img class="embla__slide__img" src="/Images/slideshow3.jpg" />
+        </div>
+      </div>
+    </div>
+    </div>
+    <br />
+
     <div class="column">
       <p>Our story began in 2015 in Palo Alto, CA&mdash;Lyuba teaching a summer class and Andrew at a software internship. Thanks to some good fortune, a first date turned into a relationship that continued back in Boston, with the help of many Peter Pan bus rides between Tufts and Wellesley.</p>
 
       <p>After graduating, Andrew went back to the San Francisco area for work, while Lyuba kept herself busy studying Russian and math that increasingly looked more like Greek. After two years and tens of thousands of miles in the air for weekends that always felt too short, we finally ended up in the same city again, settling into a cozy Beacon Hill apartment.</p>
-
+    </div>
+    <div class="column">
       <p>In the years since then, our life together has been filled with countless adventures, baking experiments (Andrew in the kitchen, Lyuba on quality assurance) and raising two wonderful kittens named Ben &amp; Jerry. We wouldn't have it any other way.</p>
 
       <p>It felt only right to propose on March 14, 2020 (also known as <a href="https://en.wikipedia.org/wiki/Pi_Day" target="_blank">Pi Day</a>) while walking through Boston's Public Garden. We can't wait to celebrate the start of our next big chapter together with you on March 12th, 2022.</p>
-      
-    </div>
-    <div class="column">
-      <canvas id="photoshow" width="600" />
     </div>
   </section>
 
@@ -133,13 +150,16 @@
       <p>Having you join us on our special day is the greatest gift of all! Any further generosity is appreciated, but by no means required.</p>
 
       <p>If you wish to honor the occasion with a gift, we've put together a list of the items we'd find useful and fun in the next chapter of our lives together.</p>
-      
+
       <p>A cash gift would be equally appreciated, and help contribute to experiences we'll cherish on our honeymoon and beyond!</p>
 
       <a href="https://www.zola.com/registry/andrewandlyuba" class="button" target="_blank">View our Registry on Zola</a>
     </div>
   </section>
 
+  <script src="https://unpkg.com/embla-carousel/embla-carousel.umd.js"></script>
+  <script src="https://unpkg.com/embla-carousel-autoplay/embla-carousel-autoplay.umd.js"></script>
   <script src="/main.js"></script>
 </body>
+
 </html>
