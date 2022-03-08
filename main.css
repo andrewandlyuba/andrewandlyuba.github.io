@@ -197,6 +197,7 @@ section.main h2 {
   margin: 0 0 75px;
   font-weight: normal;
   line-height: 30px;
+  font-variant-numeric: lining-nums;  
 }
 
 section.main nav a {
