@@ -13,13 +13,14 @@ section {
 }
 
 .scrollanchor::before {
-  content:"";
-  display:block;
+  content: "";
+  display: block;
   height: 48px;
   margin: -48px 0 0;
 }
 
-h1, h2 {
+h1,
+h2 {
   margin: 0;
 }
 
@@ -29,13 +30,15 @@ p {
   margin: 0 0 40px;
 }
 
-a:link, a:visited {
-  color:black;
+a:link,
+a:visited {
+  color: black;
   text-decoration: underline;
 }
 
-section.dark a:link, section.dark a:visited {
-  color:white;
+section.dark a:link,
+section.dark a:visited {
+  color: white;
 }
 
 h1 {
@@ -51,7 +54,7 @@ h1 {
 h2 {
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
-  font-weight:200;
+  font-weight: 200;
   font-size: 26px;
 }
 
@@ -78,7 +81,9 @@ section.dark h1 {
   margin-bottom: 25px;
 }
 
-.column img, .column iframe, .column canvas {
+.column img,
+.column iframe,
+.column canvas {
   max-width: 100%;
 }
 
@@ -104,7 +109,7 @@ a#sticky {
   position: fixed;
   background: #ffeff1;
   z-index: 10;
-  width:100%;
+  width: 100%;
   font-family: 'Raleway', sans-serif;
   text-transform: uppercase;
   font-weight: 400;
@@ -120,23 +125,23 @@ a#sticky {
 }
 
 #sticky.visible {
-  opacity:1;
+  opacity: 1;
   visibility: visible;
 }
 
 #sticky img.menu {
   position: fixed;
-  left:10px;
-  top:11px;
-  width:24px;
-  height:24px;
+  left: 10px;
+  top: 11px;
+  width: 24px;
+  height: 24px;
 }
 
 #sticky img.amp {
   height: 14px;
   margin: 0 1px 0 2px;
   position: relative;
-  top:1px;
+  top: 1px;
 }
 
 .embla {
@@ -144,7 +149,7 @@ a#sticky {
   display: inline-block;
   max-width: 800px;
   width: 100vw;
-  margin-bottom:50px;
+  margin-bottom: 50px;
   position: relative;
 }
 
@@ -158,8 +163,8 @@ a#sticky {
 }
 
 .embla__slide__img {
-  max-width:100vw;
-  width:800px;
+  max-width: 100vw;
+  width: 800px;
 }
 
 .banner {
@@ -177,10 +182,10 @@ a#sticky {
 
 
 section.main {
-  background-image: url('/Images/skyline2_1024.jpg');
+  background-image: url('/Images/octagon-1024.jpg');
   background-size: cover;
   background-position-x: 33%;
-  background-position-y: bottom;
+  background-position-y: top;
 }
 
 section.main h1 {
@@ -188,16 +193,25 @@ section.main h1 {
   margin: 50px 0 25px;
   padding: 0;
   line-height: 55px;
-  font-size:60px;
+  font-size: 60px;
 }
 
 section.main h2 {
   color: white;
   font-size: 20px;
-  margin: 0 0 75px;
+  margin: 0 0 50px;
   font-weight: normal;
   line-height: 30px;
-  font-variant-numeric: lining-nums;  
+  font-variant-numeric: lining-nums;
+}
+
+section.main p {
+  color: white;
+  max-width: 600px;
+  margin: 0 auto;
+  display: block;
+  line-height: 2em;
+  width: 90%
 }
 
 section.main nav a {
@@ -232,7 +246,25 @@ section.main nav .separator {
 }
 
 section.main img.amp {
-  height:43px;
+  height: 43px;
+}
+
+.pswp {
+  font-family: 'Raleway', sans-serif;
+  font-variant-numeric: lining-nums;
+}
+
+#gallery a {
+  display: inline-block;
+}
+
+#gallery img {
+  max-width:100%;
+  height:120px;
+}
+
+#gallery h2 {
+  margin: 50px 0;
 }
 
 @media screen and (min-width: 675px) {
@@ -251,7 +283,11 @@ section.main img.amp {
   }
 
   a.button {
-    padding:20px 50px;
+    padding: 20px 50px;
+  }
+
+  #gallery img {
+    height:300px;
   }
 }
 
@@ -274,7 +310,6 @@ section.main img.amp {
 
   section.main h2 {
     line-height: 50px;
-    margin-bottom: 150px;
     font-size: 30px;
   }
 
@@ -301,8 +336,8 @@ section.main img.amp {
   }
 
   .scrollanchor::before {
-    content:"";
-    display:block;
+    content: "";
+    display: block;
     height: 85px;
     margin: -85px 0 0;
   }
@@ -324,30 +359,29 @@ section.main img.amp {
   }
 }
 
-@media
-screen and (min-width: 1024px),
+@media screen and (min-width: 1024px),
 screen and (min-height: 768px),
 screen and (min-resolution: 97dpi) {
   section.main {
-    background-image: url('/Images/skyline2_2048.jpg');
+    background-image: url('/Images/octagon-2048.jpg');
   }
 }
 
-@media
-screen and (min-width: 2048px),
+@media screen and (min-width: 2048px),
 screen and (min-height: 1536px),
 screen and (min-resolution: 97dpi) and (min-width: 1024px),
 screen and (min-resolution: 97dpi) and (min-height: 1536px) {
   section.main {
-    background-image: url('/Images/skyline2.jpg');
+    background-image: url('/Images/octagon-full.jpg');
   }
 }
 
 @keyframes spin {
-    from {
-        transform:rotate(0deg);
-    }
-    to {
-        transform:rotate(60deg);
-    }
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(60deg);
+  }
 }
